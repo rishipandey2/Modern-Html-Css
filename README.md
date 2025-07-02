@@ -66,3 +66,10 @@ Open Source Enthusiast | Web Developer
 
 Suggestions, issues, or PRs are welcome!  
 Feel free to fork and improve this repository.
+
+## 📂 Projects
+### ✅ Project 1 - Business Card (Responsive)
+
+    A modern, responsive business card UI using Flexbox, Google Fonts, and icons. Perfect for personal portfolios or resume landing pages.
+🖼️ Screenshot:
+![Screenshot (100)](https://github.com/user-attachments/assets/f74bdd88-569f-493c-b87a-b5b24bf74eda)
