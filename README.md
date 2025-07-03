@@ -73,3 +73,7 @@ Feel free to fork and improve this repository.
     A modern, responsive business card UI using Flexbox, Google Fonts, and icons. Perfect for personal portfolios or resume landing pages.
 🖼️ Screenshot:
 ![Screenshot (100)](https://github.com/user-attachments/assets/f74bdd88-569f-493c-b87a-b5b24bf74eda)
+
+### ✅ Project 2 - Profile Card
+
+![Screenshot (103)](https://github.com/user-attachments/assets/4d5d5637-d60a-4f19-81b5-1a063bb5387b)
