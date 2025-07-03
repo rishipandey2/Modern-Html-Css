@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 body {
@@ -16,6 +16,7 @@ body {
 .card {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   width: 750px;
   border-radius: 20px;
   overflow: hidden;
@@ -29,7 +30,7 @@ body {
   width: 250px;
   padding: 30px 20px;
   display: flex;
-  padding-top:15rem;
+  padding-top: 15rem;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -43,9 +44,6 @@ body {
 .card-left p {
   margin-bottom: 20px;
 }
-
-
-
 
 .social-label {
   margin-bottom: 10px;
@@ -113,7 +111,6 @@ ul {
   color: #333;
 }
 
-
 @media (max-width: 768px) {
   .card {
     flex-direction: column;
@@ -130,10 +127,9 @@ ul {
   }
 
   .card-left {
-   align-items: center;
+    align-items: center;
     padding-top: 30px;
   }
-
 
   .card-center {
     margin: 0 auto;
