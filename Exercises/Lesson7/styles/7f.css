@@ -1,0 +1,43 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+  
+}
+
+body{
+  margin-left: 1rem;
+}
+
+.email-bar{
+  width: 17rem;
+  height: 1.7rem;
+  border-radius: 4px;
+  border: 2px solid gray;
+  margin-top: 5px;
+}
+
+.mail-text{
+  margin-top: 2px;
+  color: gray;
+}
+
+.sub-text{
+  margin-top: 12px;
+  font-size: 11px;
+  color: gray;
+}
+
+button{
+  margin-top: 15px;
+  padding-left: 6rem;
+  padding-right:6rem;
+  padding-top: .8rem;
+  padding-bottom: .8rem;
+  border-radius: 20px;
+  color: white;
+  background-color: rgb(49, 49, 249);
+  border: none;
+  font-weight: bold;
+}

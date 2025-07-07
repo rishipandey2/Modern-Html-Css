@@ -1,0 +1,24 @@
+body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Montserrat;
+
+}
+
+
+h3 {
+  margin-left: 20rem;
+  font-size: 2rem;
+  margin-bottom: -1rem;
+}
+
+p{
+
+  margin-left: 15rem;
+}
+
+
+.underline_text{
+  text-decoration: underline;
+}
