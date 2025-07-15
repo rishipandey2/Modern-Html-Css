@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nested Layout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+
+p{
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: Roboto, Arial;
+}
+
+
+.author, .video-stats{
+  font-size: 12px;
+  color:rgb(96,96,96) ;
+}
+
+.video-title{
+        margin-top: 0;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        margin-bottom: 5px;
+      }
+
+.author{
+        margin-bottom: 4px;
+      }
+.thumbnail, .video-info{
+  display: inline-block;
+  vertical-align: top;
+}
+
+img{
+  width: 300px;
+}
+  </style>
+</head>
+<body>
+  <div class="preview">
+
+    <div class="thumbnail">
+      <img src="http://127.0.0.1:5500/thumbnails/thumbnail-2.webp" alt="">
+    </div>
+
+    <div class="video-info">
+        <p class="video-title">How to compete against CS degreess (as a self-taught dev)</p>
+        <p class="author">SuperSimpleDev</p>
+        <p class="video-stats">19M views &#183; 4 years ago </p>
+      
+    </div>
+  </div>
+
+
+  <div class="preview">
+
+    <div class="thumbnail">
+      <img src="http://127.0.0.1:5500/thumbnails/thumbnail-2.webp" alt="">
+    </div>
+
+    <div class="video-info">
+        <p class="video-title">How to compete against CS degreess (as a self-taught dev)</p>
+        <p class="author">SuperSimpleDev</p>
+        <p class="video-stats">19M views &#183; 4 years ago </p>
+      
+    </div>
+
+
+    <div class="preview">
+
+      <div class="thumbnail">
+        <img src="http://127.0.0.1:5500/thumbnails/thumbnail-2.webp" alt="">
+      </div>
+  
+      <div class="video-info">
+          <p class="video-title">How to compete against CS degreess (as a self-taught dev)</p>
+          <p class="author">SuperSimpleDev</p>
+          <p class="video-stats">19M views &#183; 4 years ago </p>
+        
+      </div>
+  </div>
+</body>
+</html>
