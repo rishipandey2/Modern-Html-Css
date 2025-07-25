@@ -1,0 +1,171 @@
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  height: 60px;
+  position: fixed;
+  width: 100%;
+}
+
+nav h1 {
+  position: absolute;
+  top: 15px;
+  left: 70px;
+  font-size: 50px;
+  font-family: "Orbitron";
+  color: #28282b;
+}
+
+nav ul {
+  float: right;
+  margin-right: 50px;
+  margin-top: 23px;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 60px;
+  margin-top: 0px;
+  margin-right: 5px;
+  margin-bottom: 0px;
+  margin-left: 5px;
+}
+
+nav ul li a.link {
+  position: relative;
+}
+
+a.link {
+  font-family: "ZCOOL XiaoWei", serif;
+  font-size: 18px;
+  color: #28282b;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 1px solid #28282b;
+  padding: 20px 30px;
+  background-color: #ffffff;
+  margin: 0px 5px;
+}
+
+a.link:hover {
+  background-position-y: 70%;
+
+  color: #ffffff;
+
+  background: #28282b;
+
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👀</text></svg>")
+      16 0,
+    auto;
+}
+
+/* ---------------------------------------------------------- */
+main {
+  max-width: 80em;
+  min-width: 30em;
+  margin: 0 auto;
+    margin-top: 0px;
+  height: 100%;
+  margin-top: 0rem;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 5rem;
+  padding-bottom: 90px;
+  padding-top: 50px;
+}
+
+h1.homeheader {
+  padding-top: 8rem;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-family: 'ZCOOL XiaoWei', serif;
+  color: #28282B;
+  font-size: 46px;
+  font-weight: 400;
+  margin-top: 0rem;
+  margin-bottom: 2rem;
+  padding-top: 0rem;
+  max-width: 600px;
+  line-height: 54px;
+}
+
+/* --------------------------------------------------------- */
+
+.work {
+  display: grid;
+  grid-template: repeat(2,1fr)/repeat(2,1fr);
+  justify-content: space-evenly;
+  grid-gap: 5rem;
+}
+
+.home-item a {
+  text-decoration: none;
+}
+.img-hover-zoom {
+  overflow: hidden;
+}
+
+.img-hover-zoom:hover img {
+  transform: scale(0.9);
+}
+
+.img-hover-zoom img {
+  transition: transform .5s ease;
+}
+.fit {
+  width: 100%;
+}
+
+.title {
+  font-family: 'ZCOOL XiaoWei', serif;
+  color: #28282B;
+  line-height: 30px;
+  font-weight: 400;
+  font-size: 25px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  text-decoration: none;
+  border-bottom: 1px solid #28282B;
+}
+
+p.des {
+  margin-top: 1px;
+  padding-top: 3px;
+  margin-bottom: 30px;
+}
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  max-width: 700px;
+  line-height: 26px;
+  margin-bottom: 18px;
+  color: #28282B;
+}
+
+/* ---------------------------------------------------------- */
+.footer {
+  font-size: 20px;
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-weight: 300;
+}
+footer {
+  margin: 50px;
+    margin-bottom: 50px;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
