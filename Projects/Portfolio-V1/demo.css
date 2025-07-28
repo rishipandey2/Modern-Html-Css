@@ -1,0 +1,530 @@
+/* // font - family */
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("./fonts/Gilroy-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("./fonts/Gilroy-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("./fonts/Gilroy-Medium.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("./fonts/Gilroy-Light.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("./fonts/Gilroy-Heavy.ttf") format("truetype");
+  font-weight: 900;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #111111, #0d0d0d, #1a1a1a);
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 255, 255, 0.03),
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+nav {
+  height: 60px;
+  position: fixed;
+  width: 100%;
+}
+
+.bracket-logo {
+  font-size: 2.8rem;
+  font-family: "Courier New", monospace;
+}
+
+.logo-cube {
+  position: absolute;
+  top: 35px;
+  left: 70px;
+  width: 50px;
+  height: 50px;
+  transform-style: preserve-3d;
+  transform: rotateX(20deg) rotateY(20deg);
+  animation: spin 6s infinite linear;
+}
+
+.face {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #111;
+  color: #fff;
+  font-size: 20px;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #444;
+  opacity: 0.95;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.15),
+    0 0 30px rgba(255, 255, 255, 0.1) inset;
+  background: linear-gradient(145deg, #111, #222);
+  backdrop-filter: blur(1px);
+}
+
+/* Positioning each face */
+.front {
+  transform: translateZ(25px);
+}
+.back {
+  transform: rotateY(180deg) translateZ(25px);
+}
+.right {
+  transform: rotateY(90deg) translateZ(25px);
+}
+.left {
+  transform: rotateY(-90deg) translateZ(25px);
+}
+.top {
+  transform: rotateX(90deg) translateZ(25px);
+}
+.bottom {
+  transform: rotateX(-90deg) translateZ(25px);
+}
+
+/* Spin animation */
+@keyframes spin {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  25% {
+    transform: rotateX(180deg) rotateY(90deg);
+  }
+  50% {
+    transform: rotateX(360deg) rotateY(180deg);
+  }
+  75% {
+    transform: rotateX(540deg) rotateY(270deg);
+  }
+  100% {
+    transform: rotateX(720deg) rotateY(360deg);
+  }
+}
+
+.logo-cube {
+  animation: spin 12s infinite linear;
+}
+
+nav ul {
+  float: right;
+  margin-right: 50px;
+  margin-top: 30px;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 60px;
+  margin-top: 0px;
+  margin-right: 5px;
+  margin-bottom: 0px;
+  margin-left: 5px;
+}
+
+nav ul li a.link {
+  position: relative;
+}
+
+a.link {
+  font-family: "Gilroy", serif;
+  font-size: 22px;
+  /* color: #28282b; */
+  text-decoration: none;
+  border-radius: 50px;
+  /* border: 1px solid #28282b; */
+  padding: 20px 30px;
+  /* background-color: #ffffff; */
+  margin: 0px 5px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 30px;
+}
+
+.nav-link:hover {
+  transform: scale(1.8);
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👀</text></svg>")
+      16 0,
+    auto;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 50%;
+  bottom: 8px;
+  background-color: white;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 80%;
+}
+
+/* ---------------------------------------------------------- */
+main {
+  max-width: 100em;
+  min-width: 30em;
+  margin: 0 auto;
+  margin-top: 0px;
+  height: 100%;
+  margin-top: 0rem;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 5rem;
+  padding-bottom: 90px;
+  padding-top: 50px;
+}
+
+h1.homeheader {
+  padding-top: 13rem;
+  margin-bottom: 5rem;
+  margin-left: 33rem;
+}
+
+.subtitle {
+  letter-spacing: 0.1px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-family: "Gilroy";
+  margin-top: 10px;
+}
+
+main h1 {
+  font-family: "Gilroy";
+
+  color: rgb(243, 243, 243);
+  font-size: 190px;
+  margin-top: 0rem;
+  margin-bottom: 2rem;
+  padding-top: 0rem;
+  max-width: 700px;
+  line-height: 146.1px;
+  letter-spacing: -0.03em;
+  font-weight: 400;
+}
+
+main h1 .rahul {
+  background: linear-gradient(135deg, #f5f5f5, #c0c0c0, #eeeeee, #888888);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.4),
+    0 2px 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(200, 200, 255, 0.05);
+
+  animation: shine 6s ease-in-out infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+main h1 .pandey {
+  margin-left: -5rem;
+  background: linear-gradient(120deg, #e6e6e6, #aaaaaa, #f0f0f0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.1),
+    0 0 20px rgba(255, 255, 255, 0.05);
+  transition: all 0.4s ease;
+}
+
+main a.link {
+  margin-left: 40rem;
+  background-color: transparent;
+  border: 1.5px solid #fff;
+  color: #fff;
+  transition: all 0.3s ease;
+  margin-top: 30px;
+}
+
+main a.link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: #eee;
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👀</text></svg>")
+      16 0,
+    auto;
+}
+.know {
+  margin-left: 1rem;
+}
+
+.hey {
+  font-family: "Gilroy-Bold", "Gilroy-Bold Placeholder", sans-serif;
+  font-size: 64px;
+  letter-spacing: -0.03em;
+  line-height: 69.44px;
+  text-alignment: center;
+  color: rgb(243, 243, 243);
+  margin-left: 37rem;
+  margin-top: 20rem;
+  background: linear-gradient(120deg, #e6e6e6, #aaaaaa, #f0f0f0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.1),
+    0 0 20px rgba(255, 255, 255, 0.05);
+  transition: all 0.4s ease;
+}
+
+.about-me {
+  font-family: "Gilroy-Medium", "Gilroy-Medium Placeholder", sans-serif;
+  font-size: 20px;
+  line-height: 24.94px;
+  margin-left: 25rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.mywork {
+  margin-left: 32rem;
+}
+
+/* --------------------------------------------------------- */
+
+.work {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  justify-content: space-evenly;
+  grid-gap: 5rem;
+
+  margin-top: 5rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
+.home-item a {
+  text-decoration: none;
+}
+.img-hover-zoom {
+  overflow: hidden;
+}
+
+.img-hover-zoom:hover img {
+  transform: scale(0.9);
+}
+
+.img-hover-zoom img {
+  transition: transform 0.5s ease;
+}
+.fit {
+  width: 100%;
+}
+
+.visible-mobile {
+  display: none !important;
+}
+
+.title {
+  font-family: "Gilroy";
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 30px;
+  font-weight: 400;
+  font-size: 25px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  text-decoration: none;
+  border-bottom: 1px solid #28282b;
+}
+
+p.des {
+  margin-top: 1px;
+  padding-top: 3px;
+  margin-bottom: 30px;
+}
+p {
+  font-family: "Gilroy";
+  font-size: 16px;
+  font-weight: 400;
+  max-width: 700px;
+  line-height: 26px;
+  margin-bottom: 18px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ---------------------------------------------------------- */
+
+footer {
+  margin: 50px;
+  margin-bottom: 50px;
+
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer {
+  text-align: center;
+  font-family: "Gilroy", sans-serif;
+  font-size: 0.9rem;
+  color: #aaa;
+  padding: 1.5rem 0;
+}
+
+.footer .inspire {
+  color: #ccc;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.footer .inspire::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, #888, #fff, #888);
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.footer .inspire:hover {
+  color: #fff;
+}
+
+.footer .inspire:hover::after {
+  opacity: 1;
+}
+
+.list {
+  margin-right: 3rem;
+}
+.list .link {
+  background-color: transparent;
+  border: 1.5px solid #fff;
+  color: #fff;
+  transition: all 0.3s ease;
+
+  margin-top: 30px;
+}
+
+.list .link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: #eee;
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👀</text></svg>")
+      16 0,
+    auto;
+}
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 34px;
+  right: 1rem;
+  z-index: 100;
+  background-color: transparent;
+  border: 1.5px solid #fff;
+  color: #fff;
+  transition: all 0.3s ease;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  display: none;
+
+  transition: all 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: #eee;
+}
+
+/* //Menu toggle  */
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  position: absolute;
+  top: 18px;
+  right: 30px;
+  z-index: 1000;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+
+
